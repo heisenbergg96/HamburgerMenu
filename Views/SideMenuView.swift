@@ -15,7 +15,9 @@ struct SideMenuView: View {
         
         ZStack(alignment: .leading) {
             
-            LinearGradient(gradient: Gradient(colors: [CustomColors.eggPlant, CustomColors.lipstick]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [CustomColors.eggPlant, CustomColors.lipstick]),
+                           startPoint: .top,
+                           endPoint: .bottom)
                 .ignoresSafeArea(.all)
             
             VStack(alignment: .leading) {
@@ -35,7 +37,6 @@ struct SideMenuView: View {
                     }
                     
                 })
-                // header
                 Spacer()
             }
         }.navigationBarHidden(true)

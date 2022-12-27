@@ -23,12 +23,27 @@ struct HeaderView: View {
                     .clipShape(Circle())
                     .padding(.bottom, 20)
                 
-                Text("Vikhyath")
-                    .font(Font.system(size: 24, weight: .semibold))
-                
-                Text("@vik1634")
-                    .font(.system(size: 14))
-                
+                HStack(spacing: 14) {
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text("Vikhyath")
+                            .font(Font.system(size: 24, weight: .semibold))
+                        
+                        Text("@vik1634")
+                            .font(.system(size: 14))
+                    }
+                    
+                    Button {
+                        print("Edit button")
+                    } label: {
+                        Image(systemName: "square.and.pencil")
+                            .resizable()
+                            .frame(width: 16, height: 16)
+                        
+                    }
+
+                }
                 Spacer()
             }
             .foregroundColor(.white)
