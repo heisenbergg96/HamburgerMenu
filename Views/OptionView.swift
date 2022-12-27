@@ -16,7 +16,9 @@ struct OptionView: View {
         HStack(spacing: 16) {
             
             Image(systemName: model.imageName)
-                .frame(width: 24, height: 24)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 20, height: 20)
                 
             Text(model.rawValue)
                 .font(.system(size: 15, weight: .semibold))

@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct SideMenuView: View {
+struct SideMenuView<Destination: View>: View {
     
     @Binding var isShowing: Bool
+    
+    let destination: (SideMenuOption) -> Destination
     
     var body: some View {
         
@@ -30,7 +32,7 @@ struct SideMenuView: View {
                     ForEach(SideMenuOption.allCases, id: \.self) { row in
                         
                         NavigationLink {
-                            Text(row.rawValue)
+                            self.destination(row)
                         } label: {
                             OptionView(model: row)
                         }

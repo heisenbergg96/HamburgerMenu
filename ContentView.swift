@@ -18,7 +18,9 @@ struct ContentView: View {
             ZStack {
                 
                 if isShowing {
-                    SideMenuView(isShowing: $isShowing)
+                    SideMenuView(isShowing: $isShowing) { row in
+                        Text(row.rawValue)
+                    }
                 }
                 
                 HomeView()
